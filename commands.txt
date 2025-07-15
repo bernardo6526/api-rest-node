@@ -1,0 +1,16 @@
+Init Project
+mkdir my-node-app
+cd my-node-app
+npm init -y
+
+Install Dependencies
+npm install express sequelize pg pg-hstore dotenv
+
+Configure Sequelize
+npm install --save-dev sequelize-cli
+create .sequelizerc
+npx sequelize-cli init
+
+Create and Apply Migration
+npx sequelize-cli model:generate --name Job --attributes title:string,description:string
+npx sequelize-cli db:migrate
